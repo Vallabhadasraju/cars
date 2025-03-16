@@ -1,0 +1,70 @@
+@import '@fortawesome/fontawesome-free/css/all.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --text-color: #1f2937;
+  --bg-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --text-color: #f3f4f6;
+  --bg-color: #111827;
+}
+
+/* Base styles */
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
+         dark:bg-blue-500 dark:hover:bg-blue-600
+         transition-colors duration-200 ease-in-out;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 px-4 py-2 rounded-lg 
+         hover:bg-gray-300 hover:text-gray-900
+         dark:bg-gray-700 dark:text-gray-200 
+         dark:hover:bg-gray-600 dark:hover:text-white
+         transition-colors duration-200 ease-in-out;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md 
+         hover:shadow-lg dark:shadow-gray-900
+         transition-all duration-200 ease-in-out;
+}
+
+/* Input styles */
+input, select, textarea {
+  @apply bg-white dark:bg-gray-700 
+         text-gray-900 dark:text-white
+         border-gray-300 dark:border-gray-600
+         focus:border-blue-500 dark:focus:border-blue-400
+         focus:ring-blue-500 dark:focus:ring-blue-400
+         transition-colors duration-200 ease-in-out;
+}
+
+/* Text styles */
+h1, h2, h3, h4, h5, h6 {
+  @apply text-gray-900 dark:text-white;
+}
+
+p {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+/* Icon styles */
+.fas, .far {
+  @apply text-gray-600 dark:text-gray-400;
+}
